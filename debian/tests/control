@@ -1,0 +1,6 @@
+Tests: libjcat-tests
+Depends: gnome-desktop-testing, libjcat-tests
+
+Tests: libjcat-dev
+Depends: build-essential, libjcat-dev, pkg-config
+Restrictions: allow-stderr superficial

@@ -1,0 +1,42 @@
+libjcat (0.1.3-2) unstable; urgency=medium
+
+  * Remove unused {shlibs:Depends}
+
+ -- Mario Limonciello <mario.limonciello@dell.com>  Tue, 11 Aug 2020 10:30:12 -0500
+
+libjcat (0.1.3-1) unstable; urgency=medium
+
+  * New upstream version.
+    - Fixes CVE-2020-10759
+
+ -- Mario Limonciello <mario.limonciello@dell.com>  Tue, 16 Jun 2020 09:10:49 -0500
+
+libjcat (0.1.0-2) unstable; urgency=medium
+
+  [ Simon McVittie ]
+  * Fix FTBFS:
+    - Add missing B-D on help2man (Closes: #955258)
+    - jcat-self-test: Sign /etc/os-release instead of /etc/machine-id.
+      The autobuilders use a minimal chroot that doesn't necessarily have
+      a machine ID, but base-files gives us /etc/os-release.
+    (Closes: #955234)
+  * Fix -dev package dependencies:
+    - libjcat-dev: Add missing -dev dependencies for dependency libraries
+    - libjcat-dev: Add missing dependency on a matching libjcat1
+    - d/control: Enable gir debhelper sequence.
+      Otherwise ${gir:Depends} won't be generated.
+  * Install test data so that the installed-tests can pass
+  * Add some simple autopkgtest coverage
+    (Closes: #955259)
+
+  [ Mario Limonciello ]
+  * Backport a few other patches from upstream related to installed-tests
+    usage.
+
+ -- Mario Limonciello <mario.limonciello@dell.com>  Wed, 01 Apr 2020 16:49:21 -0500
+
+libjcat (0.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #953565)
+
+ -- Mario Limonciello <mario.limonciello@dell.com>  Mon, 23 Mar 2020 08:49:01 -0500

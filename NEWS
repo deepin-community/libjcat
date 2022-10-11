@@ -1,0 +1,39 @@
+Version 0.1.3
+~~~~~~~~~~~~~
+Released: 2020-06-16
+
+New Features:
+ - Export the JcatBlobKind and JcatBlobMethod on the result (Richard Hughes)
+
+Bugfixes:
+ - Validate that gpgme_op_verify_result() returned at least one signature (Richard Hughes)
+
+Version 0.1.2
+~~~~~~~~~~~~~
+Released: 2020-04-27
+
+Bugfixes:
+ - Lower the meson dep version for RHEL 8 (Richard Hughes)
+ - Check for Python modules explicitly during build (Jan Tojnar)
+
+Version 0.1.1
+~~~~~~~~~~~~~
+Released: 2020-04-14
+
+New Features:
+ - Allow adding an item ID 'alias' (Richard Hughes)
+
+Bugfixes:
+ - Make the installed tests actually work (Richard Hughes)
+ - Run generate-version-script.py using the same Python as meson itself (Marek Szuba)
+ - Only pass --version-script to linker when supported (Jan Tojnar)
+ - Sign a simple string instead of /etc/machine-id (Simon McVittie)
+
+Version 0.1.0
+~~~~~~~~~~~~~
+Released: 2020-03-23
+
+Notes:
+ - This is the first release of libjcat, a library for creating a modifying
+   detached signature collections, a.k.a. Jcat files.
+ - See https://github.com/hughsie/libjcat/blob/master/README.md for information.
